@@ -1,0 +1,27 @@
+def anagram(w1, w2):
+    
+    w1 = w1.replace(' ','').lower()
+    w2 = w2.replace(' ','').lower()
+    
+    if len(w1) != len(w2):
+        print('This two words are not anagram')
+        
+    counter = {}
+    
+    for letter in w1:
+        if letter in counter:
+            counter[letter] +=1
+        else:
+            counter[letter] = 1
+    
+    for letter in w2:
+        if letter in counter:
+            counter[letter] -= 1
+        else:
+            counter[letter] = 1
+
+    for k in counter:
+        if counter[k] != 0:
+            return False
+    
+    return True
