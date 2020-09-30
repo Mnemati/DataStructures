@@ -1,0 +1,24 @@
+def AnagramCheck(wordOne, wordTwo):
+    wordOne = wordOne.replace(" ", "").lower()
+    wordTwo = wordTwo.replace(" ", "").lower()
+    wordOne = arranging(wordOne)
+    wordTwo = arranging(wordTwo)
+    if wordOne == wordTwo:
+        print('These two words are anagram')
+    else:
+        print('These two words are not anagram')
+
+def arranging(word):
+    s= list(word)
+    k = 0
+    while k<len(s)-1:
+        j = 0
+        while j < len(s)-1:    #if s1[j] == ' ':
+                 #   j+=1
+            if s[j] >= s[j+1]:
+                newVar = s[j]
+                s[j] = s[j+1]
+                s[j+1] = newVar
+            j+=1
+        k+=1
+    return ''.join(s)
