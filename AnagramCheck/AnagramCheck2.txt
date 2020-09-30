@@ -1,0 +1,9 @@
+def AnagramCheck(wordOne, wordTwo):
+    wordOne = wordOne.replace(" ", "").lower()
+    wordTwo = wordTwo.replace(" ", "").lower()
+    wordOne = sorted(wordOne)
+    wordTwo = sorted(wordTwo)
+    if wordOne == wordTwo:
+        print('These two words are anagram')
+    else:
+        print('These two words are not anagram')
