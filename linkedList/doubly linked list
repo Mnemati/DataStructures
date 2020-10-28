@@ -1,0 +1,20 @@
+class doublyLinkedListNode(object):
+    
+    def __init__(self, value):
+        
+        self.value = value
+        self.next_node = None
+        self.prev_node = None
+
+# object instantiation and determining the values of each node
+a = doublyLinkedListNode(1)
+b = doublyLinkedListNode(2)
+c = doublyLinkedListNode(3)
+
+# defining the next and previous nodes
+a.next_node = b
+b.next_node = c
+c.prev_node = b
+b.prev_node = a
+
+
