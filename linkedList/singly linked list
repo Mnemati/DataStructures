@@ -1,12 +1,30 @@
-class Node():
-    
+class Node:
+    ''' This class create objects for nodes
+        in the singly linked list
+        '''
     def __init__(self, value):
-        self.value = value
-        self.nextnode = None
+        self.data = value
+        self.next = None
         
-a = Node(1)
-b = Node(2)
-c = Node(3)
+class LinkedList:
+    '''This class create a linked linst by specifying the head of the linked list 
+    '''
+    def __init__(self):
+    ''' Initialized the head '''
+        self.head = None
+        
+    def printList(self):
+    ''' It travers through the linked list and print the values '''
+        node = self.head
+        while (node):
+            print(node.value)
+            temp = node.next
 
-a.nextnode = b
-b.nextnode = c
+# creating a linked list 
+llist = LinkedList()
+llist.head = Node(1)
+second = Node(2)
+third = Node(3)
+
+llist.head.next = second
+second.next = third
