@@ -1,0 +1,7 @@
+def Factorial(n):
+    '''This recursive function calculates
+    n factorial'''
+    if (n == 0) or (n == 1):
+        return 1
+    else:
+        return n*Factorial(n-1)
