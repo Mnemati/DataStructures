@@ -1,0 +1,7 @@
+def product(b,a):
+    ''' this function recursively calculates
+    b * a'''
+    if a == 1:
+        return b*a
+    else:
+        return product(b, a-1) + product(b,1) 
