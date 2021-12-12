@@ -1,0 +1,15 @@
+def Sum(i,n):
+  ''' this recursive function calculates the summation
+    from i to n'''
+  if i == n:
+    return i
+  else:
+    return i+Sum(i+1, n)
+    
+    
+    
+  def Sum(n):
+    if n == 1:
+        return 1
+    else:
+        return n + Sum(n-1)
