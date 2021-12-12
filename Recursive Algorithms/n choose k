@@ -1,0 +1,6 @@
+def nChooseK(n,k):
+    ''' calculate n choose k using a recursive algorithm '''
+    if (n==k) or (k==0):
+        return 1
+    else:
+        return nChooseK(n-1, k) + nChooseK(n-1, k-1)
